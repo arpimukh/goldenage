@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { 
   X, 
   Plus, 
@@ -29,6 +31,16 @@ const CommunityComparison = () => {
   const [openFaq, setOpenFaq] = useState(1);
   const [showShareToast, setShowShareToast] = useState(false);
   const [showShareMenu, setShowShareMenu] = useState(false);
+
+  const searchParams = useSearchParams();
+
+useEffect(() => {
+  const idsParam = searchParams.get('ids');
+  if (idsParam) {
+    const ids = idsParam.split(',').map(id => parseInt(id, 10)).filter(Boolean);
+    setSelectedIds(ids);
+  }
+}, [searchParams]);
 
   const communities = [
     {
@@ -337,8 +349,12 @@ const CommunityComparison = () => {
           <span className="text-2xl font-black text-[#1a4d44] tracking-tight">Golden Age</span>
         </div>
         <div className="flex items-center gap-8 text-[13px] font-bold text-gray-600">
-          <a href="#" className="hover:text-[#1a4d44] transition-colors">Explore</a>
-          <a href="#" className="hover:text-[#1a4d44] transition-colors">About Us</a>
+           <Link href="/" className="hover:text-teal-700 transition-colors">
+            Explore Properties
+          </Link>
+          <Link href="/services" className="hover:text-teal-700 transition-colors">
+            Personalized Services
+          </Link>
         </div>
       </nav>
 
