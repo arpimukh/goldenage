@@ -51,11 +51,9 @@ export default function Home() {
         <Link href="/" className="text-2xl font-serif font-bold text-teal-800 tracking-tight">
           Golden Age
         </Link>
-        <div className="hidden md:flex items-center space-x-8 text-stone-600 font-medium">{/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8 text-stone-600 font-medium">
-            <Link href="/properties" className="hover:text-teal-700 transition-colors">
-              Explore Properties
-            </Link>
+        <div className=" md:flex items-center justify-between items-right sticky space-x-8 text-stone-600 font-medium">{/* Desktop Navigation Links */}
+          <div className=" md:flex items-center space-x-8 text-stone-600 font-medium">
+            
             <Link href="/communityComparison" className="hover:text-teal-700 transition-colors">
               Compare ({comparedIds.length})
             </Link>
@@ -78,7 +76,7 @@ export default function Home() {
         </div>
 
         {/* Mobile Dropdown Menu Container */}
-        {isMenuOpen && (
+        {/* {isMenuOpen && (
           <div className="md:hidden flex flex-col space-y-4 pt-6 pb-2 text-stone-600 font-medium border-t border-stone-100 mt-4">
             <Link 
               href="/properties" 
@@ -109,7 +107,7 @@ export default function Home() {
               List Your Property
             </Link>
           </div>
-        )}
+        )} */}
       </nav>
 
       {/* Hero Banner */}
