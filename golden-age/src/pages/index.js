@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Search, MapPin, Heart, Layers, ArrowRight, X } from 'lucide-react';
+import { Search, MapPin, Heart, Layers, ArrowRight, X, Menu } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
 import BookingModal from '../components/BookingModal';
 
@@ -43,7 +43,7 @@ export default function Home() {
   const filteredHomes = LISTINGS.filter(
     (home) => (city === 'All' || home.city === city) && (category === 'All' || home.type === category)
   );
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-stone-50 pb-20 relative">
       {/* Navigation */}
@@ -51,20 +51,65 @@ export default function Home() {
         <Link href="/" className="text-2xl font-serif font-bold text-teal-800 tracking-tight">
           Golden Age
         </Link>
-        <div className="hidden md:flex items-center space-x-8 text-stone-600 font-medium">
-          <Link href="/properties" className="hover:text-teal-700 transition-colors">
-            Explore Properties
-          </Link>
-          <Link href="/communityComparison" className="hover:text-teal-700 transition-colors">
-            Compare ({comparedIds.length})
-          </Link>
-           <Link href="/services" className="hover:text-teal-700 transition-colors">
-            Personalized Services
-          </Link>
-          <Link href="/register" className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition">
-            List Your Property
-          </Link>
+        <div className="hidden md:flex items-center space-x-8 text-stone-600 font-medium">{/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8 text-stone-600 font-medium">
+            <Link href="/properties" className="hover:text-teal-700 transition-colors">
+              Explore Properties
+            </Link>
+            <Link href="/communityComparison" className="hover:text-teal-700 transition-colors">
+              Compare ({comparedIds.length})
+            </Link>
+            <Link href="/services" className="hover:text-teal-700 transition-colors">
+              Personalized Services
+            </Link>
+            <Link href="/register" className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition">
+              List Your Property
+            </Link>
+          </div>
+
+          {/* Mobile Hamburger Icon Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-stone-600 focus:outline-none p-2"
+            aria-label="Toggle Navigation"
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
+
+        {/* Mobile Dropdown Menu Container */}
+        {isMenuOpen && (
+          <div className="md:hidden flex flex-col space-y-4 pt-6 pb-2 text-stone-600 font-medium border-t border-stone-100 mt-4">
+            <Link 
+              href="/properties" 
+              onClick={() => setIsMenuOpen(false)}
+              className="hover:text-teal-700 transition-colors"
+            >
+              Explore Properties
+            </Link>
+            <Link 
+              href="/communityComparison" 
+              onClick={() => setIsMenuOpen(false)}
+              className="hover:text-teal-700 transition-colors"
+            >
+              Compare ({comparedIds.length})
+            </Link>
+            <Link 
+              href="/services" 
+              onClick={() => setIsMenuOpen(false)}
+              className="hover:text-teal-700 transition-colors"
+            >
+              Personalized Services
+            </Link>
+            <Link 
+              href="/register" 
+              onClick={() => setIsMenuOpen(false)}
+              className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition inline-block text-center w-full"
+            >
+              List Your Property
+            </Link>
+          </div>
+        )}
       </nav>
 
       {/* Hero Banner */}
