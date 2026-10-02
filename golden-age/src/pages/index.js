@@ -47,68 +47,61 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-stone-50 pb-20 relative">
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-8 py-6 bg-white sticky top-0 z-40 border-b border-stone-100">
-        <Link href="/" className="text-2xl font-serif font-bold text-teal-800 tracking-tight">
-          Golden Age
-        </Link>
-        <div className=" md:flex items-center justify-between items-left space-x-8 text-stone-600 font-medium">{/* Desktop Navigation Links */}
-          {/* <div className=" md:flex items-center space-x-8 text-stone-600 font-medium">
-            
-            <Link href="/communityComparison" className="hover:text-teal-700 transition-colors">
-              Compare Properties
-            </Link>
-            <Link href="/services" className="hover:text-teal-700 transition-colors">
-              Personalized Services
-            </Link>
-            <Link href="/register" className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition">
-              List Your Property
-            </Link>
-          </div> */}
+      <nav className="bg-white sticky top-0 z-40 border-b border-stone-100 px-8 py-6">
+  <div className="flex justify-between items-right">
+    {/* Brand Logo */}
+    <Link href="/" className="text-2xl font-serif font-bold text-teal-800 tracking-tight">
+      Golden Age
+    </Link>
+    <div className="flex items-right space-x-4">
+      <Link 
+        href="/register" 
+        className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition text-sm font-medium whitespace-nowrap"
+      >
+        List Your Property
+      </Link>
+       <Link 
+        href="/services" 
+        onClick={() => setIsMenuOpen(false)}
+        className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition text-sm font-medium whitespace-nowrap"
 
-          {/* Mobile Hamburger Icon Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-stone-600 focus:outline-none p-2"
-            aria-label="Toggle Navigation"
-          >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
+      >
+        Personalized Services
+      </Link>
+    
+    {/* Hamburger Menu Toggle Button (Visible on all screens) */}
+    <button
+      onClick={() => setIsMenuOpen(!isMenuOpen)}
+      className="text-stone-600 focus:outline-none p-2"
+      aria-label="Toggle Navigation"
+    >
+      {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+    </button>
+    </div>
+  </div>
 
-        {/* Mobile Dropdown Menu Container */}
-         {isMenuOpen && (
-          <div className="md:hidden flex flex-col space-y-4 pt-6 pb-2 text-stone-600 font-medium border-t border-stone-100 mt-4">
-            <Link 
-              href="/" 
-              onClick={() => setIsMenuOpen(false)}
-              className="hover:text-teal-700 transition-colors"
-            >
-              Explore Properties
-            </Link>
-            <Link 
-              href="/communityComparison" 
-              onClick={() => setIsMenuOpen(false)}
-              className="hover:text-teal-700 transition-colors"
-            >
-              Compare Properties
-            </Link>
-            <Link 
-              href="/services" 
-              onClick={() => setIsMenuOpen(false)}
-              className="hover:text-teal-700 transition-colors"
-            >
-              Personalized Services
-            </Link>
-            <Link 
-              href="/register" 
-              onClick={() => setIsMenuOpen(false)}
-              className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition inline-block text-center w-full"
-            >
-              List Your Property
-            </Link>
-          </div>
-        )} 
-      </nav>
+  {/* Dropdown Menu (Visible on all screens when open) */}
+  {isMenuOpen && (
+    <div className="flex flex-col space-y-4 pt-6 pb-2 text-stone-600 font-medium border-t border-stone-100 mt-4">
+      <Link 
+        href="/" 
+        onClick={() => setIsMenuOpen(false)}
+        className="hover:text-teal-700 transition-colors"
+      >
+        Explore Properties
+      </Link>
+      <Link 
+        href="/communityComparison" 
+        onClick={() => setIsMenuOpen(false)}
+        className="hover:text-teal-700 transition-colors"
+      >
+        Compare Properties
+      </Link>
+     
+      
+    </div>
+  )} 
+</nav>
 
       {/* Hero Banner */}
       <div className="relative h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
