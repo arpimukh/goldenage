@@ -52,7 +52,7 @@ export default function Home() {
           Golden Age
         </Link>
         <div className=" md:flex items-center justify-between items-left space-x-8 text-stone-600 font-medium">{/* Desktop Navigation Links */}
-          <div className=" md:flex items-center space-x-8 text-stone-600 font-medium">
+          {/* <div className=" md:flex items-center space-x-8 text-stone-600 font-medium">
             
             <Link href="/communityComparison" className="hover:text-teal-700 transition-colors">
               Compare Properties
@@ -63,7 +63,7 @@ export default function Home() {
             <Link href="/register" className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition">
               List Your Property
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Hamburger Icon Button */}
           <button
@@ -76,10 +76,10 @@ export default function Home() {
         </div>
 
         {/* Mobile Dropdown Menu Container */}
-        {/* {isMenuOpen && (
+         {isMenuOpen && (
           <div className="md:hidden flex flex-col space-y-4 pt-6 pb-2 text-stone-600 font-medium border-t border-stone-100 mt-4">
             <Link 
-              href="/properties" 
+              href="/" 
               onClick={() => setIsMenuOpen(false)}
               className="hover:text-teal-700 transition-colors"
             >
@@ -90,7 +90,7 @@ export default function Home() {
               onClick={() => setIsMenuOpen(false)}
               className="hover:text-teal-700 transition-colors"
             >
-              Compare ({comparedIds.length})
+              Compare Properties
             </Link>
             <Link 
               href="/services" 
@@ -107,7 +107,7 @@ export default function Home() {
               List Your Property
             </Link>
           </div>
-        )} */}
+        )} 
       </nav>
 
       {/* Hero Banner */}
