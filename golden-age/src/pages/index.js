@@ -60,14 +60,7 @@ export default function Home() {
       >
         List Your Property
       </Link>
-       <Link 
-        href="/services" 
-        onClick={() => setIsMenuOpen(false)}
-        className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition text-sm font-medium whitespace-nowrap"
-
-      >
-        Personalized Services
-      </Link>
+       
     
     {/* Hamburger Menu Toggle Button (Visible on all screens) */}
     <button
@@ -125,6 +118,14 @@ export default function Home() {
           </h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
             Discover premium community & independent living in India's most sought-after retirement hubs.
+          </p>
+          <p className="mt-6 text-l opacity-80">
+            Book premium services for autonomous living, healthcare, and lifestyle experiences{'>>>'} <Link 
+        href="/services" 
+        onClick={() => setIsMenuOpen(false)}
+        className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition text-sm font-medium whitespace-nowrap">
+         Premium Services
+      </Link>
           </p>
         </div>
       </div>
