@@ -105,21 +105,23 @@ export default function Home() {
 </nav>
 
       {/* Hero Banner */}
-      <div className="relative h-[450px] flex items-center justify-center text-center text-white overflow-hidden">
+      <div className="relative h-[300px] flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/30 z-10" />
-        <img 
+        {/* <img 
           src="https://images.unsplash.com/photo-1544161515-4ad6ce6ecdd8?auto=format&fit=crop&q=80" 
           className="absolute inset-0 w-full h-full object-cover" 
           alt="Senior Living" 
-        />
-        <div className="relative z-20 max-w-4xl px-4">
-          <h1 className="text-5xl md:text-6xl font-serif mb-6 leading-tight">
-            Retire where life feels <br/>like a vacation.
-          </h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+        /> */}
+        <div className="relative z-20 max-w-6xl px-4">
+          {/* <h1 className="text-5xl md:text-6xl font-serif mb-6 leading-tight"> */}
+          <p className="text-5xl opacity-90 mx-auto">
+            Retire where life feels like a vacation.
+          </p>
+          {/* </h1> */}
+          <p className="text-2xl opacity-90 max-w-2xl mx-auto">
             Discover premium community & independent living in India's most sought-after retirement hubs.
           </p>
-          <p className="mt-6 text-l opacity-80">
+          <p className="mt-6 text-xl opacity-86 mx-w-2xl mx-auto">
             Book premium services for autonomous living, healthcare, and lifestyle experiences{'>>>'} <Link 
         href="/services" 
         onClick={() => setIsMenuOpen(false)}
@@ -127,6 +129,7 @@ export default function Home() {
          Premium Services
       </Link>
           </p>
+          <br />
         </div>
       </div>
 
