@@ -251,21 +251,21 @@ export default function Home() {
         {isMenuOpen && (
           <div className="sm:hidden flex flex-col space-y-3 pt-4 pb-2 text-stone-600 font-medium border-t border-stone-100 mt-3 animate-in fade-in">
             <a 
-              href="#" 
+              href="/" 
               onClick={() => setIsMenuOpen(false)}
               className="hover:text-teal-700 transition-colors py-1 text-sm"
             >
               Explore Properties
             </a>
             <a 
-              href="#" 
+              href="/communityComparison" 
               onClick={() => setIsMenuOpen(false)}
               className="hover:text-teal-700 transition-colors py-1 text-sm"
             >
               Compare Properties
             </a>
             <a 
-              href="#" 
+              href="/services" 
               onClick={() => setIsMenuOpen(false)}
               className="inline-block text-center bg-teal-50 text-teal-700 px-4 py-2 rounded-xl text-sm font-semibold mt-2"
             >
@@ -305,7 +305,7 @@ export default function Home() {
               Book premium services for autonomous living, healthcare, and lifestyle experiences.
             </span>
             <a 
-              href="#" 
+              href="/services" 
               className="bg-teal-600 hover:bg-teal-500 text-white px-5 py-2.5 rounded-xl transition-all font-semibold whitespace-nowrap shrink-0 shadow-md text-xs"
             >
               Explore Premium Services
