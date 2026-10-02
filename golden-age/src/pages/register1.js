@@ -131,7 +131,7 @@ const App = () => {
         <nav className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => setView('landing')}>
             <div className="bg-emerald-600 p-1.5 rounded-lg"><Building2 size={24} /></div>
-            <span className="text-xl font-bold tracking-tight">LivingTrail</span>
+            <span className="text-xl font-bold tracking-tight">GoldenAge</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
             <a href="#" className="hover:text-emerald-400">Pricing</a>
@@ -203,7 +203,7 @@ const App = () => {
           <div className="relative z-10 p-16 flex flex-col justify-between h-full">
             <div onClick={() => setView('landing')} className="flex items-center gap-2 text-white cursor-pointer">
               <div className="bg-emerald-600 p-1.5 rounded"><Building2 size={20} /></div>
-              <span className="text-xl font-bold tracking-tight">LivingTrail</span>
+              <span className="text-xl font-bold tracking-tight">GoldenAge</span>
             </div>
             <div className="max-w-md">
               <h1 className="text-5xl font-bold text-white mb-6 leading-tight">Welcome back</h1>

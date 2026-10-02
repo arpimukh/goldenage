@@ -37,7 +37,7 @@ const PREMIUM_SERVICES = [
       'Palliative & ICU-at-Home Nursing'
     ]
   },
-  { 
+  {
     id: 'doctor_consultation',
     title: 'Doctor Consultation & Physio',
     icon: Coffee,
@@ -412,7 +412,7 @@ export default function Home() {
                       />
                     </div>
 
-                    {(!(PREMIUM_SERVICES.id === 'doctor_consultation')) && (<div className="grid grid-cols-2 gap-4">
+                    {activeStep === 3 && (<div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="block text-xs font-bold text-slate-500 uppercase">Start Time</label>
                         <select 

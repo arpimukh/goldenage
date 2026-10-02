@@ -191,7 +191,7 @@ const HeroSection = () => {
           <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-900/30">
             L
           </div>
-          <span className="text-2xl font-black tracking-tight text-white">LivingTrail <span className="text-emerald-400 font-bold text-sm uppercase tracking-widest ml-1 bg-emerald-900/40 px-2 py-0.5 rounded-md border border-emerald-800/50">Provider</span></span>
+          <span className="text-2xl font-black tracking-tight text-white">GoldenAge <span className="text-emerald-400 font-bold text-sm uppercase tracking-widest ml-1 bg-emerald-900/40 px-2 py-0.5 rounded-md border border-emerald-800/50">Provider</span></span>
         </div>
 
         {/* Core Value Proposition Copy */}
@@ -203,7 +203,7 @@ const HeroSection = () => {
             Connect directly with families looking for premium care.
           </h1>
           <p className="text-emerald-100/75 leading-relaxed text-[17px]">
-            Say goodbye to expensive third-party commission brokers. LivingTrail empowers you to list your properties, display real-time pricing, and handle inquiries transparently.
+            Say goodbye to expensive third-party commission brokers. GoldenAge empowers you to list your properties, display real-time pricing, and handle inquiries transparently.
           </p>
 
           {/* Social Proof Checklist */}
@@ -238,7 +238,7 @@ const HeroSection = () => {
               {[...Array(5)].map((_, idx) => <Star key={idx} size={12} fill="currentColor" />)}
             </div>
             <p className="text-xs italic text-emerald-100/80 leading-relaxed">
-              &quot;Switching our portfolio of 4 communities to LivingTrail saved us over $40,000 in referral commission costs in our very first quarter.&quot;
+              &quot;Switching our portfolio of 4 communities to GoldenAge saved us over $40,000 in referral commission costs in our very first quarter.&quot;
             </p>
             <p className="text-[10px] font-black uppercase text-emerald-400 tracking-wider mt-3">
               Sarah Jenkins • VP of Operations, Senior Wellness LLC
@@ -254,7 +254,7 @@ const HeroSection = () => {
         <div className="px-8 md:px-16 pt-8 flex justify-between items-center lg:justify-end gap-4">
           <div className="flex items-center gap-2 cursor-pointer lg:hidden" onClick={() => { setAuthMode('signup'); setSignupStep(1); }}>
             <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-black text-sm">L</div>
-            <span className="text-lg font-black tracking-tight">LivingTrail</span>
+            <span className="text-lg font-black tracking-tight">GoldenAge</span>
           </div>
 
           <div className="text-xs font-bold text-slate-400 flex items-center gap-2">
@@ -741,7 +741,7 @@ const HeroSection = () => {
 
         {/* Footer info bar */}
         <div className="px-8 md:px-16 pb-8 pt-4 border-t border-slate-50 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-[11px] font-bold">
-          <p>© 2026 LivingTrail Inc. Professional Platform.</p>
+          <p>© 2026 GoldenAge Senior Care. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-slate-600">Privacy Protocol</a>
             <a href="#" className="hover:text-slate-600">Terms of Placement</a>
