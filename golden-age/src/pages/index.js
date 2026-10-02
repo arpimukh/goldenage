@@ -51,11 +51,11 @@ export default function Home() {
         <Link href="/" className="text-2xl font-serif font-bold text-teal-800 tracking-tight">
           Golden Age
         </Link>
-        <div className=" md:flex items-center justify-between items-right sticky space-x-8 text-stone-600 font-medium">{/* Desktop Navigation Links */}
+        <div className=" md:flex items-center justify-between items-left space-x-8 text-stone-600 font-medium">{/* Desktop Navigation Links */}
           <div className=" md:flex items-center space-x-8 text-stone-600 font-medium">
             
             <Link href="/communityComparison" className="hover:text-teal-700 transition-colors">
-              Compare ({comparedIds.length})
+              Compare Properties
             </Link>
             <Link href="/services" className="hover:text-teal-700 transition-colors">
               Personalized Services
