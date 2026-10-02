@@ -6,7 +6,7 @@ import { Search, MapPin, Heart, Layers, ArrowRight, X, Menu, Sparkles, Check, Ph
 const LISTINGS = [
   { id: 1, registrationID: "GO-001", name: "Golden Oaks Community", city: "Bangalore", type: "Community Living", price: "45,000", image: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=80", tags: ["Medical Care", "Shared Dining"] },
   { id: 2, registrationID: "AP-002", name: "Azure Palms Independent", city: "Goa", type: "Independent Living", price: "65,000", image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80", tags: ["Beach Access", "Private Garden"] },
-  { id: 3, registrationID: "SL-003", name: "Silver Linings Hub", city: "Bangalore", type: "Independent Living", price: "38,000", image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80", tags: ["Yoga Studio", "24/7 Security"] },
+  { id: 3, registrationID: "SL-003", name: "Silver Linings Hub", city: "Bangalore", type: "Assisted Living", price: "38,000", image: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&q=80", tags: ["Yoga Studio", "24/7 Security"] },
   { id: 4, registrationID: "SS-004", name: "Seaside Serenity Villas", city: "Goa", type: "Community Living", price: "72,000", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80", tags: ["Pet Friendly", "Pool"] }
 ];
 
@@ -230,7 +230,7 @@ export default function Home() {
 
           <div className="flex items-center space-x-3">
             <a 
-              href="#" 
+              href="/register" 
               className="bg-teal-700 text-white px-5 py-2.5 rounded-full hover:bg-teal-800 transition text-xs sm:text-sm font-medium whitespace-nowrap shadow-sm"
             >
               List Your Property
@@ -361,6 +361,7 @@ export default function Home() {
                   <option value="All">All Categories</option>
                   <option value="Community Living">Community Living (Social & Care)</option>
                   <option value="Independent Living">Independent Living (Privacy & Freedom)</option>
+                  <option value="Assisted Living">Assisted Living (Support & Safety)</option>
                 </select>
               </div>
 
