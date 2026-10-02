@@ -97,6 +97,14 @@ export default function Home() {
       >
         Compare Properties
       </Link>
+       <Link 
+        href="/services" 
+        onClick={() => setIsMenuOpen(false)}
+        className="bg-teal-700 text-white px-6 py-2 rounded-full hover:bg-teal-800 transition text-sm font-medium whitespace-nowrap"
+
+      >
+        Personalized Services
+      </Link>
      
       
     </div>
